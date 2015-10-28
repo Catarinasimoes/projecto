@@ -1,0 +1,31 @@
+﻿1>------ Rebuild All started: Project: RealTimeEVM, Configuration: Debug x64 ------
+1>  TemporalFilter.cpp
+1>TemporalFilter.cpp(105): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+1>TemporalFilter.cpp(106): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+1>TemporalFilter.cpp(122): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>  SpatialFilter.cpp
+1>SpatialFilter.cpp(78): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>SpatialFilter.cpp(79): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>SpatialFilter.cpp(80): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>SpatialFilter.cpp(81): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>SpatialFilter.cpp(149): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+1>SpatialFilter.cpp(198): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>SpatialFilter.cpp(199): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>SpatialFilter.cpp(200): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>SpatialFilter.cpp(201): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+1>  SlidingGraph.cpp
+1>  main.cpp
+1>  MagnifyThread.cpp
+1>  Magnificator.cpp
+1>Magnificator.cpp(76): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+1>c:\users\catarina\documents\visual studio 2013\evm\realtimeevm - documented\realtimeevm\Buffer.hpp(67): warning C4267: 'initializing' : conversion from 'size_t' to 'unsigned int', possible loss of data
+1>          c:\users\catarina\documents\visual studio 2013\evm\realtimeevm - documented\realtimeevm\Buffer.hpp(65) : while compiling class template member function 'unsigned int Buffer<cv::Mat>::size(void)'
+1>          Magnificator.cpp(33) : see reference to function template instantiation 'unsigned int Buffer<cv::Mat>::size(void)' being compiled
+1>          Magnificator.cpp(33) : see reference to class template instantiation 'Buffer<cv::Mat>' being compiled
+1>  CaptureThread.cpp
+1>CaptureThread.cpp(295): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+1>  Generating Code...
+1>  PreviewThread.cpp
+1>PreviewThread.cpp(56): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+1>  RealTimeEVM.vcxproj -> C:\Users\Catarina\Documents\Visual Studio 2013\evm\RealTimeEVM - Documented\x64\Debug\RealTimeEVM.exe
+========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========

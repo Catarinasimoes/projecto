@@ -1,0 +1,43 @@
+﻿cl : Command line warning D9038: /ZI is not supported on this platform; enabling /Zi instead
+cl : Command line warning D9007: '/Gm' requires '/Zi'; option ignored
+  CaptureThread.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+CaptureThread.cpp(296): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+  CaptureThreadC.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+CaptureThreadC.cpp(55): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+CaptureThreadC.cpp(56): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+  CaptureThreadIR.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+CaptureThreadIR.cpp(296): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+  CommandUI.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  FaceDetectionThread.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+FaceDetectionThread.cpp(84): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+FaceDetectionThread.cpp(94): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+FaceDetectionThread.cpp(96): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+FaceDetectionThread.cpp(97): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+  Magnificator.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+Magnificator.cpp(82): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+Magnificator.cpp(124): warning C4553: '==' : operator has no effect; did you intend '='?
+Magnificator.cpp(183): warning C4018: '<' : signed/unsigned mismatch
+Magnificator.cpp(194): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+Magnificator.cpp(198): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+Magnificator.cpp(311): warning C4018: '<' : signed/unsigned mismatch
+Magnificator.cpp(328): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+Magnificator.cpp(264): warning C4101: 'pChannels' : unreferenced local variable
+Magnificator.cpp(391): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+Magnificator.cpp(420): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\Buffer.hpp(67): warning C4267: 'initializing' : conversion from 'size_t' to 'unsigned int', possible loss of data
+          c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\Buffer.hpp(65) : while compiling class template member function 'unsigned int Buffer<cv::Mat>::size(void)'
+          Magnificator.cpp(39) : see reference to function template instantiation 'unsigned int Buffer<cv::Mat>::size(void)' being compiled
+          Magnificator.cpp(39) : see reference to class template instantiation 'Buffer<cv::Mat>' being compiled
+  MagnifyThread.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  OpticalFlow.cpp
+  main.cpp
+c:\users\catarina\documents\visual studio 2013\projects\novo_evm\realtimeevm - documented\realtimeevm\EvmSettings.hpp(203): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+  RealTimeEVM.vcxproj -> C:\Users\Catarina\Documents\Visual Studio 2013\Projects\novo_evm\RealTimeEVM - Documented\x64\Debug\RealTimeEVM.exe

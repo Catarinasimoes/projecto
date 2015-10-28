@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Threads">
+      <UniqueIdentifier>{8ce4b799-1d6d-46da-a95c-22be8c40a2d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Structures">
+      <UniqueIdentifier>{0b2c2c73-da61-4940-b0cc-bf294f4832fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Magnification">
+      <UniqueIdentifier>{41140674-1cc6-43f3-b82f-02d7eee06abe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sliding Graph">
+      <UniqueIdentifier>{25a85344-5b15-4b46-a948-ad84a86a8bb7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureThread.cpp">
+      <Filter>Source Files\Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="Magnificator.cpp">
+      <Filter>Source Files\Magnification</Filter>
+    </ClCompile>
+    <ClCompile Include="SpatialFilter.cpp">
+      <Filter>Source Files\Magnification</Filter>
+    </ClCompile>
+    <ClCompile Include="TemporalFilter.cpp">
+      <Filter>Source Files\Magnification</Filter>
+    </ClCompile>
+    <ClCompile Include="MagnifyThread.cpp">
+      <Filter>Source Files\Threads</Filter>
+    </ClCompile>
+    <ClCompile Include="SlidingGraph.cpp">
+      <Filter>Source Files\Magnification</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureThreadC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CaptureThreadIR.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\evm\RealTimeEVM - Documented\RealTimeEVM\PreviewThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpticalFlow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceDetectionThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\..\AppData\Local\Temp\Rar$DRa0.169\GraphUtils.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CaptureThread.hpp">
+      <Filter>Source Files\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Buffer.hpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="Magnificator.h">
+      <Filter>Source Files\Magnification</Filter>
+    </ClInclude>
+    <ClInclude Include="SpatialFilter.h">
+      <Filter>Source Files\Magnification</Filter>
+    </ClInclude>
+    <ClInclude Include="TemporalFilter.h">
+      <Filter>Source Files\Magnification</Filter>
+    </ClInclude>
+    <ClInclude Include="MagnifyThread.hpp">
+      <Filter>Source Files\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Commands.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EvmSettings.hpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="SlidingGraph.hpp">
+      <Filter>Source Files\Sliding Graph</Filter>
+    </ClInclude>
+    <ClInclude Include="PreviewThread.hpp">
+      <Filter>Source Files\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="Sampling.hpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClInclude>
+    <ClInclude Include="CaptureThreadC.hpp">
+      <Filter>Source Files\Threads</Filter>
+    </ClInclude>
+    <ClInclude Include="CaptureThreadIR.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpticalFlow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceDetectionThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\..\AppData\Local\Temp\Rar$DRa0.169\GraphUtils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="plotting.m" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_eye.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_eye_tree_eyeglasses.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_frontalcatface.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_frontalcatface_extended.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_frontalface_alt.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_frontalface_alt_tree.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_frontalface_alt2.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_frontalface_default.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_fullbody.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_lefteye_2splits.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_licence_plate_rus_16stages.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_lowerbody.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_profileface.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_righteye_2splits.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_russian_plate_number.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_smile.xml" />
+    <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_upperbody.xml" />
+  </ItemGroup>
+</Project>

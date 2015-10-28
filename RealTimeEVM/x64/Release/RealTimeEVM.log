@@ -1,0 +1,50 @@
+﻿Build started 22/09/2015 11:17:55.
+     1>Project "C:\Users\Catarina\Documents\Visual Studio 2013\evm\RealTimeEVM - Documented\RealTimeEVM\RealTimeEVM.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\opencv3.0\opencv\build\x64\vc12\..\..\include /I"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\\inc" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc120.pdb" /Gd /TP /errorReport:prompt CaptureThread.cpp Magnificator.cpp MagnifyThread.cpp main.cpp PreviewThread.cpp SlidingGraph.cpp SpatialFilter.cpp TemporalFilter.cpp
+         CaptureThread.cpp
+     1>CaptureThread.cpp(295): warning C4244: 'initializing' : conversion from 'double' to 'int', possible loss of data
+         Magnificator.cpp
+     1>Magnificator.cpp(76): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>c:\users\catarina\documents\visual studio 2013\evm\realtimeevm - documented\realtimeevm\Buffer.hpp(67): warning C4267: 'initializing' : conversion from 'size_t' to 'unsigned int', possible loss of data
+                 c:\users\catarina\documents\visual studio 2013\evm\realtimeevm - documented\realtimeevm\Buffer.hpp(65) : while compiling class template member function 'unsigned int Buffer<cv::Mat>::size(void)'
+                 Magnificator.cpp(33) : see reference to function template instantiation 'unsigned int Buffer<cv::Mat>::size(void)' being compiled
+                 Magnificator.cpp(33) : see reference to class template instantiation 'Buffer<cv::Mat>' being compiled
+         MagnifyThread.cpp
+         main.cpp
+         PreviewThread.cpp
+     1>PreviewThread.cpp(56): warning C4267: '=' : conversion from 'size_t' to 'int', possible loss of data
+         SlidingGraph.cpp
+         SpatialFilter.cpp
+     1>SpatialFilter.cpp(78): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>SpatialFilter.cpp(79): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>SpatialFilter.cpp(80): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>SpatialFilter.cpp(81): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>SpatialFilter.cpp(149): warning C4267: 'initializing' : conversion from 'size_t' to 'int', possible loss of data
+     1>SpatialFilter.cpp(198): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>SpatialFilter.cpp(199): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>SpatialFilter.cpp(200): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>SpatialFilter.cpp(201): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         TemporalFilter.cpp
+     1>TemporalFilter.cpp(105): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>TemporalFilter.cpp(106): warning C4244: 'initializing' : conversion from 'int' to 'float', possible loss of data
+     1>TemporalFilter.cpp(122): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Catarina\Documents\Visual Studio 2013\evm\RealTimeEVM - Documented\x64\Release\RealTimeEVM.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:C:\opencv3.0\opencv\build\x64\vc12\lib /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v2.0_1409\\Lib\x64" opencv_world300.lib opencv_ts300.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Kinect20.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Catarina\Documents\Visual Studio 2013\evm\RealTimeEVM - Documented\x64\Release\RealTimeEVM.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Catarina\Documents\Visual Studio 2013\evm\RealTimeEVM - Documented\x64\Release\RealTimeEVM.lib" /MACHINE:X64 x64\Release\CaptureThread.obj
+         x64\Release\Magnificator.obj
+         x64\Release\MagnifyThread.obj
+         x64\Release\main.obj
+         x64\Release\PreviewThread.obj
+         x64\Release\SlidingGraph.obj
+         x64\Release\SpatialFilter.obj
+         x64\Release\TemporalFilter.obj
+     1>CaptureThread.obj : error LNK2001: unresolved external symbol CreateFaceAlignment
+     1>CaptureThread.obj : error LNK2001: unresolved external symbol CreateFaceModel
+     1>CaptureThread.obj : error LNK2001: unresolved external symbol CreateHighDefinitionFaceFrameSource
+     1>CaptureThread.obj : error LNK2001: unresolved external symbol GetFaceModelVertexCount
+     1>C:\Users\Catarina\Documents\Visual Studio 2013\evm\RealTimeEVM - Documented\x64\Release\RealTimeEVM.exe : fatal error LNK1120: 4 unresolved externals
+     1>Done Building Project "C:\Users\Catarina\Documents\Visual Studio 2013\evm\RealTimeEVM - Documented\RealTimeEVM\RealTimeEVM.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:19.70
