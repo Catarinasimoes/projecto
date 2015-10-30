@@ -38,10 +38,12 @@ private:
 	double fh;
 	std::mutex fh_m;
 
-	double colow;
+	//double colow;
+	float colow;
 	std::mutex colow_m;
 
-	double cohigh;
+	//double cohigh;
+	float cohigh;
 	std::mutex cohigh_m;
 
 	double cowavelength;
@@ -58,7 +60,7 @@ private:
 
 
 public:
-	EvmSettings() : framerate(0), face(0), alpha(0), levels(0), fl(0), fh(0), colow(20.0), cohigh(40.0), cowavelength(5), chromattenuation(1), mode(2), settingsChanged(false) {
+	EvmSettings() : framerate(0), face(0), alpha(1000), levels(6), fl(0), fh(0), colow(20.0), cohigh(40.0), cowavelength(5), chromattenuation(0.1), mode(2), settingsChanged(false) {
 	}
 
 

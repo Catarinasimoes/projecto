@@ -234,28 +234,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\AppData\Local\Temp\Rar$DRa0.169\GraphUtils.cpp" />
-    <ClCompile Include="..\..\..\..\evm\RealTimeEVM - Documented\RealTimeEVM\PreviewThread.cpp">
-      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</CompileAs>
-    </ClCompile>
     <ClCompile Include="CaptureThread.cpp" />
     <ClCompile Include="CaptureThreadC.cpp" />
+    <ClCompile Include="Capture_VideoFile.cpp" />
     <ClCompile Include="CommandUI.cpp" />
     <ClCompile Include="FaceDetectionThread.cpp" />
     <ClCompile Include="Magnificator.cpp" />
     <ClCompile Include="MagnifyThread.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="OpticalFlow.cpp" />
+    <ClCompile Include="PreviewThread.cpp" />
     <ClCompile Include="SlidingGraph.cpp" />
     <ClCompile Include="SpatialFilter.cpp" />
     <ClCompile Include="TemporalFilter.cpp" />
     <ClCompile Include="CaptureThreadIR.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\AppData\Local\Temp\Rar$DRa0.169\GraphUtils.h" />
     <ClInclude Include="Buffer.hpp" />
     <ClInclude Include="CaptureThread.hpp" />
     <ClInclude Include="CaptureThreadC.hpp" />
+    <ClInclude Include="Capture_VideoFile.h" />
     <ClInclude Include="Commands.hpp" />
     <ClInclude Include="CommandUI.h" />
     <ClInclude Include="EvmSettings.hpp" />
@@ -271,6 +269,10 @@
     <ClInclude Include="CaptureThreadIR.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Microsoft.Kinect.Face.dll" />
+    <None Include="Microsoft.Kinect.Fusion.dll" />
+    <None Include="Microsoft.Kinect.VisualGestureBuilder.dll" />
+    <None Include="Microsoft.Kinect.Wpf.Controls.dll" />
     <None Include="plotting.m" />
   </ItemGroup>
   <ItemGroup>

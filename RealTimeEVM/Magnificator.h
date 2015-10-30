@@ -61,6 +61,10 @@ public:
 
 	int currentFrame;
 	EvmSettings &evmSettings;
+
+	void YCbCr2BGR(const cv::Mat &src, cv::Mat &dst);
+
+	void BGR2YCbCr(const cv::Mat &src, cv::Mat &dst);
 private:
 	//Holds settings
 	//EvmSettings &evmSettings;

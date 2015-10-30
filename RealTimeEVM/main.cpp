@@ -14,7 +14,7 @@
 #include <Kinect.Face.h>
 
 #include "Buffer.hpp"
-#include "CaptureThreadC.hpp"
+#include "Capture_VideoFile.h"
 #include "MagnifyThread.hpp"
 #include "PreviewThread.hpp"
 #include "Commands.hpp"
@@ -24,22 +24,10 @@ using namespace std;
 using namespace cv;
 
 /// Global Variables
-int Alpha = 100;
+//int Alpha = 100;
 //int Alpha;
 //int alpha;
 //double beta;
-
-void on_trackbar(int, void*)
-{
-
-	//beta = (1.0 - alpha);
-
-	//addWeighted(src1, alpha, src2, beta, 0.0, dst);
-
-
-
-}
-
 
 
 
@@ -47,12 +35,8 @@ void on_trackbar(int, void*)
 
 
 int main() {
-	char TrackbarName[50];
-	sprintf(TrackbarName, "Alpha", Alpha);
-	cvNamedWindow("Parameters", WINDOW_AUTOSIZE);
-	createTrackbar("Alpha", "Parameters", &Alpha, Alpha, on_trackbar);
+	
 
-	//cvNamedWindow("nova", CV_GUI_NORMAL);
 
 
 	cout << "Real time EVM!" << endl;
@@ -77,15 +61,15 @@ int main() {
 	//Hold settings
 	EvmSettings settings;
 	//Set some default values
-	settings.setAlpha(100);
-	settings.setFramerate(15);
-	settings.setLevels(6);
+	settings.setAlpha(40);
+	settings.setFramerate(20);
+	settings.setLevels(4);
 	settings.setFl(0.8);
 	settings.setFh(1);
 	settings.setcolow(20);
-	settings.setcohigh(60);
-	settings.setcowavelength(5);
-	settings.setchromattenuation(0.1);
+	settings.setcohigh(40);
+	settings.setcowavelength(50);
+	settings.setchromattenuation(0);
 	settings.setmode(2);
 	settings.setface(1);
 
@@ -93,7 +77,7 @@ int main() {
 	int devicenumber = 0;
 	int width = 1000;
 	int height = 500;
-	CaptureThreadC cap(framesBuffer, clonedframesBuffer, faceArea, samplingPoints, settings);
+	Capture_VideoFile cap(framesBuffer, clonedframesBuffer, faceArea, samplingPoints, settings);
 	//CaptureThreadC cap(framesBuffer, faceArea, samplingPoints, capturePoints, settings);
 	/*if (!cap.connectToCam()) {
 		cout << "Error Connecting to kinnect" << endl;

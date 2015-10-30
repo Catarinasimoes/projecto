@@ -54,9 +54,6 @@
     <ClCompile Include="CaptureThreadIR.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\evm\RealTimeEVM - Documented\RealTimeEVM\PreviewThread.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="OpticalFlow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,7 +63,10 @@
     <ClCompile Include="CommandUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\AppData\Local\Temp\Rar$DRa0.169\GraphUtils.cpp">
+    <ClCompile Include="PreviewThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Capture_VideoFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -119,12 +119,16 @@
     <ClInclude Include="CommandUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\AppData\Local\Temp\Rar$DRa0.169\GraphUtils.h">
+    <ClInclude Include="Capture_VideoFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="plotting.m" />
+    <None Include="Microsoft.Kinect.Face.dll" />
+    <None Include="Microsoft.Kinect.Fusion.dll" />
+    <None Include="Microsoft.Kinect.VisualGestureBuilder.dll" />
+    <None Include="Microsoft.Kinect.Wpf.Controls.dll" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="..\..\..\..\..\..\..\..\opencv3.0\opencv\sources\data\haarcascades\haarcascade_eye.xml" />

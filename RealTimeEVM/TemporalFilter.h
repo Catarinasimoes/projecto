@@ -62,7 +62,7 @@ void createIdealBandpassFilter(cv::Mat &filter, double cutoffLo, double cutoffHi
  * \param cutoffLo Lower cutoff frequency.
  * \param cutoffHi Higher cutoff frequency.
  */
-void iirFilter(const cv::Mat &src, cv::Mat &dst, cv::Mat &lowpassHi, cv::Mat &lowpassLo, double cutoffLo, double cutoffHi);
+void iirFilter(const cv::Mat &src, cv::Mat &dst, cv::Mat &lowpassHi, cv::Mat &lowpassLo, float cutoffLo, float cutoffHi);
 /*!
  * \brief iirWaveletFilter (Wavelet Magnification) Applies an iirFilter (in space domain) on 1 level of a DWT.
  * \param src

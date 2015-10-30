@@ -15,11 +15,11 @@
 ///Filter //////////////
 ////////////////////////
 void iirFilter(const cv::Mat &src, cv::Mat &dst, cv::Mat &lowpassHi, cv::Mat &lowpassLo,
-               double cutoffLo, double cutoffHi)
+               float cutoffLo, float cutoffHi)
 {
     // Set minimum for cutoff, so low cutoff gets faded out
     if(cutoffLo == 0)
-        cutoffLo = 0.01;
+        cutoffLo = 0.001;
 
     /* The higher cutoff*, the faster the lowpass* image of the lowpass* pyramid gets faded out.
      * That means, a high cutoff weights new images (= \param src)

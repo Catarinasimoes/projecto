@@ -152,7 +152,7 @@ void Magnificator::motionMagnify(){
 			double colow = evmSettings.getcolow();
 			double cohigh = evmSettings.getcohigh();
 		}
-		cout << alpha << " " << " " << framerate << " " << levels << " " << colow << " " << cohigh << endl;
+		//cout << alpha << " " << " " << framerate << " " << levels << " " << colow << " " << cohigh << endl;
 		// Grab oldest frame from processingBuffer and delete it to save memory
 		cv::Mat input = processingBuffer.dequeue();
 
@@ -165,7 +165,7 @@ void Magnificator::motionMagnify(){
 		//ROI.convertTo(input, CV_32FC3, 1.0 / 255.0f);
 		ROI.convertTo(ROI, CV_32FC3, 1.0 / 255.0f);
 		cvtColor(ROI, ROI, CV_BGR2YCrCb);
-
+		//BGR2YCbCr(ROI, ROI);
 		inputROIs.push_back(ROI);
 		buildLaplacePyrFromImg(ROI, levels, inputPyramid);
 		//processar movimento
@@ -188,18 +188,18 @@ void Magnificator::motionMagnify(){
 
 		int w = ROI.size().width;
 		int h = ROI.size().height;
+		
 
-
-		// Amplification variable
+		// Amplification variable//8.0
 		float delta = evmSettings.getcowavelength() / (8.0 * (1.0 + alpha));
 		//std::cout << "Delta is " << delta << endl;
-		int exaggeration_factor = 5;
+		int exaggeration_factor = 10;
 
-		float lambda = sqrt(w*w + h*h) / 3.0;
+		float lambda = sqrt(w*w + h*h)/ 3.0;
 		//std::cout << "Lambda is " << lambda << endl;
 		//std::cout << delta;
 		for (int curLevel = levels; curLevel >= 0; --curLevel) {
-			amplifyLaplacian(motionPyramid.at(curLevel), motionPyramid.at(curLevel), curLevel, lambda, delta, 8, levels, alpha);
+			amplifyLaplacian(motionPyramid.at(curLevel), motionPyramid.at(curLevel), curLevel, lambda, delta, 10, levels, alpha);
 			//cout << "iam now amplifying level  " << curLevel << endl;
 			lambda /= 2.0;
 		}
@@ -224,7 +224,7 @@ void Magnificator::motionMagnify(){
 	motion = inputROIs.front();
 }
 	cvtColor(motion, motion, CV_YCrCb2BGR);
-
+	//YCbCr2BGR(motion, motion);
 	double minimo, maximo;
 	minMaxLoc(motion, &minimo, &maximo);
 	motion.convertTo(motion, CV_8UC3, 255.0 / (maximo - minimo), -minimo * 255.0 / (maximo - minimo));	//VERY SLOW
@@ -330,7 +330,8 @@ void Magnificator::waveletMagnify() {
 			}
 		}
 		buildImgFromWaveletPyr(wlMotionPyramid, motion, ROI.size());
-		GaussianBlur(motion, motion, cv::Size(0, 0),1.25 );
+		//GaussianBlur(motion, motion, cv::Size(0, 0),1.25 );
+		GaussianBlur(motion, motion, cv::Size(0, 0), 1.25);
 		// Merge array of motions back into one image
 		/*for (int chn = 0; chn < 1; ++chn) {
 			inputChannels[chn] = motion;
@@ -389,7 +390,7 @@ void Magnificator::amplifyLaplacian(const cv::Mat &src, cv::Mat &dst, int currle
 {
 
 	float currAlpha = (lambda / (delta*8.0) - 1.0) * exageration_factor;
-
+	//cout << currAlpha << endl;
 	// Set lowpassed&downsampled image and difference image with highest resolution to 0,
 	// amplify every other level
 	dst = (currlevel == levels || currlevel == 0) ? src * 0
@@ -429,4 +430,60 @@ void Magnificator::amplifyWavelet(const vector<cv::Mat> &src, vector<cv::Mat> &d
 void Magnificator::denoiseWavelet(vector< vector<cv::Mat> > &src, vector< vector<cv::Mat> > &dst, float threshold)
 {
 
+}
+
+void Magnificator::YCbCr2BGR(const cv::Mat &src, cv::Mat &dst)
+{
+	cv::Mat image = cv::Mat::zeros(src.size(), src.type());
+
+	const uchar* uc_pixel = src.data;
+	uchar* c_pixel = image.data;
+	for (int row = 0; row < src.rows; ++row)
+	{
+		uc_pixel = src.data + row*src.step;
+		c_pixel = image.data + row*src.step;
+		for (int col = 0; col < src.cols; ++col)
+		{
+			int Y = uc_pixel[0];
+			int Cb = uc_pixel[1];
+			int Cr = uc_pixel[2];
+
+			c_pixel[0] = Y + 1.4*(Cr - 128);
+			c_pixel[1] = Y - 0.343*(Cb - 128) - 0.711*(Cr - 128);
+			c_pixel[2] = Y + 1.765*(Cb - 128);
+
+			uc_pixel += 3;
+			c_pixel += 3;
+		}
+	}
+
+	dst = image;
+}
+
+void Magnificator::BGR2YCbCr(const cv::Mat &src, cv::Mat &dst)
+{
+	cv::Mat image = cv::Mat::zeros(src.size(), src.type());
+
+	const uchar* uc_pixel = src.data;
+	uchar* c_pixel = image.data;
+	for (int row = 0; row < src.rows; ++row)
+	{
+		uc_pixel = src.data + row*src.step;
+		c_pixel = image.data + row*src.step;
+		for (int col = 0; col < src.cols; ++col)
+		{
+			int R = uc_pixel[0];
+			int G = uc_pixel[1];
+			int B = uc_pixel[2];
+
+			c_pixel[0] = 0 + 0.299*R + 0.587*G + 0.114*B;
+			c_pixel[1] = 128 - 0.169*R - 0.331*G + 0.5*B;
+			c_pixel[2] = 128 + 0.5*R - 0.419*G - 0.081*B;
+
+			uc_pixel += 3;
+			c_pixel += 3;
+		}
+	}
+
+	dst = image;
 }
